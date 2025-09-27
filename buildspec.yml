@@ -28,5 +28,4 @@ artifacts:
 cache:
   paths:
     - '/root/.docker/**/*'
-    - 'node_modules/**/*'
-    - '/var/lib/docker/**/*'    
+    - 'node_modules/**/*'  

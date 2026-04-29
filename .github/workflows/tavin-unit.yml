@@ -1,0 +1,9 @@
+name: Tavín Unit
+on: [push]
+
+jobs:
+  unit:
+    runs-on: tavin-linux
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm test

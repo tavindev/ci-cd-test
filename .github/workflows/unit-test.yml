@@ -1,0 +1,12 @@
+name: Unit Test
+
+on:
+  push:
+
+jobs:
+  unit-test:
+    name: Unit tests
+    runs-on: tavin-linux
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm test

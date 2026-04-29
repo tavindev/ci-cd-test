@@ -9,4 +9,6 @@ test('static landing page includes the expected status copy', async () => {
   assert.match(html, /Application Status: Running/)
   assert.match(html, /Docker container was built successfully/)
   assert.match(html, /simple static website served by NGINX/)
+  assert.match(html, /Welcome to the CI\/CD test application!/)
+
 })

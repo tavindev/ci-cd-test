@@ -6,6 +6,10 @@ FROM nginx:latest
 # And '/usr/share/nginx/html' is the default NGINX web root
 COPY your-static-content/ /usr/share/nginx/html
 
+# Substitute env vars (e.g. TEST_NUMBER) into the served HTML at container start.
+COPY docker-entrypoint.d/40-envsubst-html.sh /docker-entrypoint.d/40-envsubst-html.sh
+RUN chmod +x /docker-entrypoint.d/40-envsubst-html.sh
+
 # Expose port 80, which is the default port NGINX listens on
 EXPOSE 80
 
